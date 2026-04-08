@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Bebas'; /* Nome que você vai chamar */
+    src: url('fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+}
+
+*{
+    font-family: 'Bebas';
+}
+
+
+body {
+    background-color: rgb(20, 14, 26);
+}
+
+.titulo {
+    /* Fonte */
+    font-family: 'Bebas';
+    font-size: 40px;
+    color: white;
+    /* Outra coisa */
+}

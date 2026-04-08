@@ -1,0 +1,11 @@
+INTUITO DO SITE:
+    Apresentar o projeto para a aline. Logo, o site tem que ser capaz de explicar como o site vai funcionar, e por que ele vai existir.
+
+REQUISITOS DO SITE:
+    - Diagrama de classes;
+    - Requisitos do sistema;
+    - O porque dele ser criado;
+    - Descrição do contexto;
+    - Diagrama de caso de uso;
+    - Diagrama de classes;
+    - 
