@@ -1,17 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Apresentação do Projeto</title>
 </head>
 <body>
-    <div class="titulo">
-        <h1> APRESENTAÇÃO DO PROJETO </h1>
-        <p>
-            Esta é a ideia principal do Eclipse, o projeto final da ETESC em conjunto com <a href="#" class="linkEmbed">Lúcio Ladeira</a>, <a href="#" class="linkEmbed">Davi Garrocho</a> e <a href="#" class="linkEmbed">Saymon da Silva</a>
-        </p>
+    <!-- Nav -->
+    <div class="navigation">
+        <p>ECLIPSE</p>
+        <nav>
+            <a href="#">Objetivo</a>
+            <a href="#">Justificativa</a>
+            <a href="#">Requisitos do Sistema</a>
+            <a href="#">Diagrama de Caso de Uso</a>
+            <a href="#">Diagrama de Classes</a>
+        </nav>
     </div>
+
+    <!-- Começo do site, Título Inicial -->
+    <div id="divTitulo">
+        <div class="titulo">
+            <h1>APRESENTAÇÃO DO PROJETO</h1>
+            <p>
+            Esta é a ideia principal do 
+            <a href="#" class="embedLink">ECLIPSE</a>, o projeto final da 
+            <a href="#" class="embedLink">ETESC</a> em conjunto com 
+            <a href="#" class="embedLink">Lúcio Ladeira</a>, 
+            <a href="#" class="embedLink">Davi Garrocho</a> e 
+            <a href="#" class="embedLink">Saymon da Silva</a>
+            </p>
+        </div>
+    </div>
+    
+    <!-- Objetivo do projeto -->
+    <div id="divObjetivo">
+        <div class="objetivo">
+            <h1> OBJETIVO</h1>
+            <p>O objetivo do site se dá por auxiliar na criação de computadores, e na compra de peças.</p>
+        </div>
+    </div>
+
+    <!-- Justificativa do projeto -->
+    <div class="justificativa">
+        <h1> JUSTIFICATIVA </h1>
+        <p> A vontade de criar o site veio da percepção de um gap no mercado de hardware. Onde as pessoas não tem noção do tipo de hardware eles precisam para o seu uso.</p>
+    </div>
+
+    <!-- Requisitos do Sistema -->
+    <div class="requisitos">
+        <h1>REQUISITOS DO SISTEMA</h1>
+        <h2>REQUISITOS FUNCIONAIS</h2>
+        <div class="carousel-container">
+            <button class="prev">◀</button>
+
+            <div class="carousel" id="carousel">
+                <div class="card">RF01 - Cadastro</div>
+                <div class="card">RF02 - Login</div>
+                <div class="card">RF03 - Logout</div>
+                <div class="card">RNF01 - Segurança</div>
+                <div class="card">RNF02 - Performance</div>
+            </div>
+        </div>
+
+        <button class="next">▶</button>
+        <h2>REQUISITOS NÃO FUNCIONAIS</h2>
+        <div class="carousel-container">
+            <button class="prev">◀</button>
+
+            <div class="carousel" id="carousel">
+                <div class="card">RF01 - Cadastro</div>
+                <div class="card">RF02 - Login</div>
+                <div class="card">RF03 - Logout</div>
+                <div class="card">RNF01 - Segurança</div>
+                <div class="card">RNF02 - Performance</div>
+            </div>
+
+            <script>
+                const carousel = document.getElementById('carousel');
+
+                document.querySelector('.next').onclick = () => {
+                    carousel.scrollLeft += 300;
+                };
+
+                document.querySelector('.prev').onclick = () => {
+                    carousel.scrollLeft -= 300;
+                };
+            </script>
+        </div>
+
+        <button class="next">▶</button>
+    </div>
+
+
+    <!-- Diagrama de Caso de Uso -->
+    <div class="casoDeUso">
+        <h1>DIAGRAMA DE CASO DE USO</h1>
+    </div>
+
+    <!-- Diagrama de Classes -->
+    <div class="classes">
+        <h1>DIAGRAMA DE CLASSES</h1>
+        <div class="conteiner">
+            <h2>Suporte</h2>
+            <h3>Atributos</h3>
+            <ul>
+                <li>asdadasd</li>
+                <li>asdasdas</li>
+                <li>adasdad</li>
+            </ul>
+            <h3>Métodos</h3>
+            <ul>
+                <li>asdadasd</li>
+                <li>asdasdas</li>
+                <li>adasdad</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p> Conteúdo do footer </p>
+    </footer>
 </body>
 </html>

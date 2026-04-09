@@ -1,42 +1,237 @@
-/* Definição da fonte */
+/*--------------------------------- Definição da fonte ---------------------------------*/
 @font-face {
     font-family: 'Bebas'; /* Nome que você vai chamar */
     src: url('fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
 }
 
-*{
-    font-family: 'Bebas';
-}
-
-/* Atributos do Body */
-body {
-    background-color: rgb(20, 14, 26);
-}
-
-/* Título principal do site */
-.titulo {
-    /* Fonte */
-    font-family: 'Bebas';
-    font-size: 40px;
-    color: white;
-
-    /* Tamanho */
-    max-width: 600px;
-
-    /* Posição */
-    margin-left: 150px;
-}
-
-/* Criação de links imbutidos, para que fique direitinho no texto */
-.linkEmbed {
+/*--------------------------------- Criação de links imbutidos, para que fique direitinho no texto ---------------------------------*/
+.embedLink {
     text-decoration: none;
     color: white;
     transition: 0.15s;
 }
 
 /* Hover dos links imbutidos, para que assim sejam reconhecidos */
-.linkEmbed:hover {
+.embedLink:hover {
     color: yellow;
     font-size: 45px;
     transition: 0.15s;
 }
+
+/*--------------------------------- Atributos do Body ---------------------------------*/
+html, body {
+    /* Background Principal */
+    background-color: rgb(44, 17, 71);
+
+    /* Zerando variáveis */
+    margin: 0;
+    padding: 0;
+
+    /* Dimensionando*/
+    max-width: 100%; max-height: 100%;
+
+    /* Fonte Padrão */
+    font-family: 'Bebas';
+}
+
+/*--------------------------------- Nav ---------------------------------*/
+.navigation {
+    /* Background da Nav */
+    background-color: rgb(58, 47, 112);
+    /* Position */
+    display: flex;
+    /* Text */
+    font-size: larger;
+    /* Formato */
+    padding: 20px;
+}
+
+.navigation p {
+    margin: 0;
+    color: white;
+    font-size: larger;
+}
+
+.navigation nav {
+    margin-left: 40%;
+}
+
+.navigation a {
+    transition: 0.3s;
+    text-decoration: none;
+    color: rgb(207,207,207);
+    padding: 5px;
+    font-size: larger;
+}
+
+.navigation a:hover {
+    transition: 0.3s;
+    color: rgb(255,209,102);
+}
+
+.navigation:hover {
+    font-size: yellow;
+}
+
+/*--------------------------------- Título principal do site ---------------------------------*/
+#divTitulo {
+    background-image: url(assets/VaporWave2460x1440.png);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+}
+
+.titulo {
+    /* Fonte */
+    font-size: 40px;
+    color: white;
+    margin: 0 0 0 150px;
+
+    /* Tamanho */
+    width: 600px;
+    /*height: 100%;*/
+
+    /* Posição */
+    margin-left: 150px;
+}
+
+/*--------------------------------- Objetivos ---------------------------------*/
+#divObjetivo {
+    /* Cor do Background */
+    background-color: rgb(91, 69, 112);
+
+    /* Posição */
+    padding: 24px;
+}
+
+.objetivo {
+    /* Fonte */
+    font-size: 40px;
+    color: white;
+    
+    /* Posição */
+    margin-left: 150px;
+}
+
+/*------------------------------- Justificativa ---------------------------------*/
+.justificativa {
+    /* Cor de fundo*/
+    background-color: rgb(44, 17, 71);
+
+    /* Posição */
+    padding: 24px;
+}
+
+.justificativa h1, h2, p {
+    /* Fonte */
+    font-size: 40px;
+    color: white;
+
+    /* Posição */
+    margin-left: 150px;
+}
+/*------------------------------- Requisitos do Sistema ---------------------------------*/
+.requisitos {
+    /* Cor de fundo*/
+    background-color: rgb(91, 69, 112);
+
+    /* Posição */
+    padding: 24px;
+}
+
+.requisitos h1, h2, p {
+    /* Fonte */
+    font-size: 40px;
+    color: white;
+
+    /* Posição */
+    margin-left: 150px;
+}
+
+/* Carrocel */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    /*width: 80%;*/
+}
+
+.card {
+    min-width: 250px;
+    margin-right: 16px;
+    background: rgb(44, 17, 71);
+    color: white;
+    padding: 16px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    background-color: brown;
+}
+
+/*------------------------------- Diagrama de Caso de Uso ---------------------------------*/
+.casoDeUso {
+    /* Cor de fundo*/
+    background-color: rgb(44, 17, 71);
+
+    /* Posição */
+    padding: 24px;
+}
+
+.casoDeUso h1, h2, p {
+    /* Fonte */
+    font-size: 40px;
+    color: white;
+
+    /* Posição */
+    margin-left: 150px;
+}
+/*--------------------------------- Diagrama de Classes ---------------------------------*/
+.classes {
+    /* Cor do Background */
+    background-color: rgb(91, 69, 112);
+
+    /* Posição */
+    padding: 24px;
+}
+
+.casoDeUso h1, h2, p {
+    /* Fonte */
+    font-size: 40px;
+    color: white;
+
+    /* Posição */
+    margin-left: 150px;
+}
+
+.conteiner {
+    transition: 0.3s;
+    background-color: coral;
+
+    max-width: 20vw;
+    border-radius: 20px;
+    padding: 10px;
+
+    font-size: medium;
+}
+
+.conteiner:hover {
+    transition: 0.3s;
+    background-color: brown;
+}
+
+/*--------------------------------- Footer ---------------------------------*/
+footer {
+    background-color: coral;
+}
+
+/*--------------------------------- Outros ---------------------------------*/

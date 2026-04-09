@@ -11,3 +11,7 @@ REQUISITOS DO SITE:
 OUTROS REQUISITOS:
     - Logo;
     - Paleta de Cores;
+
+IDEIAS LOGO:
+    - O "C" do ECLIPSE como uma lua crescente(ou decrescente, sla)
+    - 
