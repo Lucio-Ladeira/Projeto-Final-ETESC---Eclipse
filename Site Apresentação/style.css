@@ -1,3 +1,26 @@
+/*--------------------------------- Definição das cores ---------------------------------*/
+:root {
+    
+    --cor-primaria: #7F49B4;
+    --cor-secundaria: #3A2F70;
+    --cor-terciaria: #596EB1;
+    --cor-contraste: #FFD166;
+    --cor-claro: #CFCFCF;
+    --cor-marfim: #fffff0;
+    --cor-escuro: #141414;
+    
+
+    /*
+    --cor-primaria: #141414;
+    --cor-secundaria: #7f49b4;
+    --cor-terciaria: #596EB1;
+    --cor-contraste: #FFD166;
+    --cor-claro: #CFCFCF;
+    --cor-marfim: #fffff0;
+    --cor-escuro: #141414;
+    */
+}
+
 /*--------------------------------- Definição da fonte ---------------------------------*/
 @font-face {
     font-family: 'Bebas'; /* Nome que você vai chamar */
@@ -13,7 +36,7 @@
 
 /* Hover dos links imbutidos, para que assim sejam reconhecidos */
 .embedLink:hover {
-    color: yellow;
+    color: var(--cor-contraste);
     font-size: 45px;
     transition: 0.15s;
 }
@@ -21,7 +44,7 @@
 /*--------------------------------- Atributos do Body ---------------------------------*/
 html, body {
     /* Background Principal */
-    background-color: rgb(44, 17, 71);
+    background-color: var(--cor-secundaria);
 
     /* Zerando variáveis */
     margin: 0;
@@ -37,7 +60,7 @@ html, body {
 /*--------------------------------- Nav ---------------------------------*/
 .navigation {
     /* Background da Nav */
-    background-color: rgb(58, 47, 112);
+    background-color: var(--cor-secundaria);
     /* Position */
     display: flex;
     /* Text */
@@ -59,93 +82,147 @@ html, body {
 .navigation a {
     transition: 0.3s;
     text-decoration: none;
-    color: rgb(207,207,207);
+    color: var(--cor-claro);
     padding: 5px;
     font-size: larger;
 }
 
 .navigation a:hover {
     transition: 0.3s;
-    color: rgb(255,209,102);
+    color: var(--cor-contraste);
 }
 
-.navigation:hover {
-    font-size: yellow;
+.navigation a:hover {
+    font-size: 20px;
+    color: var(--cor-contraste);
 }
 
 /*--------------------------------- Título principal do site ---------------------------------*/
-#divTitulo {
+.titulo {
+    /* Background */
     background-image: url(assets/VaporWave2460x1440.png);
     background-size: cover;
     background-position: center;
-    padding: 40px 0;
-}
-
-.titulo {
-    /* Fonte */
-    font-size: 40px;
-    color: white;
-    margin: 0 0 0 150px;
 
     /* Tamanho */
-    width: 600px;
+    padding: 40px 0 0 0;
+    height: 90vh;
+}
+
+.titulo h1 {
+    /* Fonte */
+    font-size: 80px;
+    color: var(--cor-marfim);
+
+    /* Tamanho */
+    width: 400px;
     /*height: 100%;*/
 
     /* Posição */
-    margin-left: 150px;
+    margin: 0 0 50px 150px;
+}
+
+.titulo p {
+    /* Fonte */
+    font-size: 40px;
+    color: var(--cor-marfim);
+
+    /* Tamanho */
+    width: 650px;
+    /*height: 100%;*/
+
+    /* Posição */
+    margin: 0 0 0 300px;
 }
 
 /*--------------------------------- Objetivos ---------------------------------*/
-#divObjetivo {
-    /* Cor do Background */
-    background-color: rgb(91, 69, 112);
+.objetivo {
+    /* Background */
+    background-color: var(--cor-primaria);
 
-    /* Posição */
-    padding: 24px;
+    /* Tamanho */
+    padding: 24px 0 24px 0;
 }
 
-.objetivo {
+.objetivo h1 {
+    /* Fonte */
+    font-size: 80px;
+    color: var(--cor-marfim);
+
+    /* Posição */
+    margin: 0 50px 15px 150px;
+}
+
+.objetivo p {
     /* Fonte */
     font-size: 40px;
-    color: white;
+    color: var(--cor-marfim);
     
     /* Posição */
-    margin-left: 150px;
+    margin: 0 50px 0 300px;
 }
 
 /*------------------------------- Justificativa ---------------------------------*/
 .justificativa {
     /* Cor de fundo*/
-    background-color: rgb(44, 17, 71);
+    background-color: var(--cor-secundaria);
 
-    /* Posição */
-    padding: 24px;
+    /* Tamanho */
+    /*padding: 24px;*/
+    padding: 24px 0 24px 0;
 }
 
-.justificativa h1, h2, p {
+.justificativa h1 {
     /* Fonte */
-    font-size: 40px;
-    color: white;
+    font-size: 80px;
+    color: var(--cor-marfim);
 
     /* Posição */
-    margin-left: 150px;
+    margin: 0 50px 15px 150px;
+}
+
+.justificativa p {
+    /* Fonte */
+    font-size: 40px;
+    color: var(--cor-marfim);
+
+    /* Posição */
+    margin: 0 50px 0 300px;
 }
 /*------------------------------- Requisitos do Sistema ---------------------------------*/
 .requisitos {
     /* Cor de fundo*/
-    background-color: rgb(91, 69, 112);
+    background-color: var(--cor-primaria);
 
     /* Posição */
-    padding: 24px;
+    padding: 24px 0 24px 0;
 }
 
-.requisitos h1, h2, p {
+.requisitos h1 {
+    /* Fonte */
+    font-size: 80px;
+    color: var(--cor-marfim);
+
+    /* Tamanho */
+    margin: 0 0 15px 150px;
+}
+
+.requisitos h2 {
+    /* Fonte */
+    font-size: 60px;
+    color: var(--cor-marfim);
+
+    /* Tamanho */
+    margin: 0 0 15px 250px;
+}
+
+.requisitos p {
     /* Fonte */
     font-size: 40px;
-    color: white;
+    color: var(--cor-marfim);
 
-    /* Posição */
-    margin-left: 150px;
+    /* Tamanho */
+    margin: 0 0 0 300px;
 }
 
 /* Carrocel */
@@ -159,29 +236,109 @@ html, body {
     display: flex;
     overflow: hidden;
     scroll-behavior: smooth;
-    /*width: 80%;*/
+    /*margin: 0 130px 0 300px;*/
+}
+
+.prevRF {
+    /* Aparência */
+    background:none;
+    border: none;
+    color: var(--cor-marfim);
+
+    /* Posição */
+    margin: 0 0 0 280px;
+}
+
+.prevRNF {
+    /* Aparência */
+    background:none;
+    border: none;
+    color: var(--cor-marfim);
+
+    /* Posição */
+    margin: 0 0 0 420px;
 }
 
 .card {
-    min-width: 250px;
-    margin-right: 16px;
-    background: rgb(44, 17, 71);
-    color: white;
-    padding: 16px;
-    border-radius: 12px;
+    transition: 0.3s;
+
     flex-shrink: 0;
+
+    /* Criação da scrollbar */
+    overflow-y: auto;
+    /* Firefox*/
+    scrollbar-width: none;
+    /* Chrome, Safari e Edge */
+    .card::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Aparência */
+    background: var(--cor-secundaria);
+    border-radius: 12px;
+
+    /* Fonte */
+    color: var(--cor-marfim);
+
+    /* Tamanho */
+    min-width: 250px;
+    max-width: 500px;
+    max-height: 300px;
+    padding: 16px;
+    
+    /* Posição */
+    margin: 0 16px 20px 0;
+    /*margin-right: 16px;*/
 }
 
 .card:hover {
-    transform: scale(1.05);
+    /*transform: scale(1.05);*/
     transition: 0.3s;
-    background-color: brown;
+    background-color: var(--cor-contraste);
+    
+    h1, li {
+        color: var(--cor-escuro);
+    }
+}
+
+.card h1 {
+    /* Fonte */
+    font-size: 40px;
+    text-align: center;
+
+    /* Posição */
+    margin: 0 20px 0 20px;
+}
+
+.card li {
+    /* Fonte */
+    font-size: 25px;
+    color: var(--cor-contraste);
+
+    /* Posição */
+    margin: 0 0 5px 0;
+}
+
+.nextRF {
+    background:none;
+    border: none;
+    color: var(--cor-marfim);
+
+    margin: 0 130px 0 0;
+}
+
+.nextRNF {
+    background:none;
+    border: none;
+    color: var(--cor-marfim);
+
+    margin: 0 130px 0 0;
 }
 
 /*------------------------------- Diagrama de Caso de Uso ---------------------------------*/
 .casoDeUso {
     /* Cor de fundo*/
-    background-color: rgb(44, 17, 71);
+    background-color: var(--cor-secundaria);
 
     /* Posição */
     padding: 24px;
@@ -196,21 +353,12 @@ html, body {
     margin-left: 150px;
 }
 /*--------------------------------- Diagrama de Classes ---------------------------------*/
-.classes {
+.diagramaDeClasses {
     /* Cor do Background */
-    background-color: rgb(91, 69, 112);
+    background-color: var(--cor-primaria);
 
     /* Posição */
     padding: 24px;
-}
-
-.casoDeUso h1, h2, p {
-    /* Fonte */
-    font-size: 40px;
-    color: white;
-
-    /* Posição */
-    margin-left: 150px;
 }
 
 .conteiner {

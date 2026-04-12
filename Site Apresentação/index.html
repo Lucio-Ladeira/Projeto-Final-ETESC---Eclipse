@@ -7,7 +7,7 @@
     <title>Apresentação do Projeto</title>
 </head>
 <body>
-    <!-- Nav -->
+    <!-- ----------------------------- Nav ----------------------------------- -->
     <div class="navigation">
         <p>ECLIPSE</p>
         <nav>
@@ -19,88 +19,162 @@
         </nav>
     </div>
 
-    <!-- Começo do site, Título Inicial -->
-    <div id="divTitulo">
-        <div class="titulo">
-            <h1>APRESENTAÇÃO DO PROJETO</h1>
-            <p>
-            Esta é a ideia principal do 
-            <a href="#" class="embedLink">ECLIPSE</a>, o projeto final da 
-            <a href="#" class="embedLink">ETESC</a> em conjunto com 
-            <a href="#" class="embedLink">Lúcio Ladeira</a>, 
-            <a href="#" class="embedLink">Davi Garrocho</a> e 
-            <a href="#" class="embedLink">Saymon da Silva</a>
-            </p>
-        </div>
+    <!-- ----------------------------- Título do Site ----------------------------------- -->
+    <div class="titulo">
+        <h1>APRESENTAÇÃO DO PROJETO</h1>
+        <p>
+        Esta é a ideia principal do 
+        <a href="https://github.com/Lucio-Ladeira/Projeto-Final-ETESC---Eclipse" class="embedLink">ECLIPSE</a>, o projeto final da 
+        <a href="https://www.instagram.com/ete_faetecsantacruz/?hl=pt" class="embedLink">ETESC</a> em conjunto com 
+        <a href="https://github.com/Lucio-Ladeira" class="embedLink">Lúcio Ladeira</a>, 
+        <a href="https://github.com/DaviGarrocho" class="embedLink">Davi Garrocho</a> e 
+        <a href="https://github.com/Kksaimo" class="embedLink">Saymon da Silva</a>
+        </p>
     </div>
     
-    <!-- Objetivo do projeto -->
-    <div id="divObjetivo">
-        <div class="objetivo">
-            <h1> OBJETIVO</h1>
-            <p>O objetivo do site se dá por auxiliar na criação de computadores, e na compra de peças.</p>
-        </div>
+    <!-- ----------------------------- Objetivo do Projeto ----------------------------------- -->
+    <div class="objetivo">
+        <h1> OBJETIVO </h1>
+        <p>
+            O objetivo do site se dá por auxiliar na criação de computadores, e na compra de peças.
+        </p>
     </div>
 
-    <!-- Justificativa do projeto -->
+    <!-- ----------------------------- Justificativa do Projeto ----------------------------------- -->
     <div class="justificativa">
         <h1> JUSTIFICATIVA </h1>
         <p> A vontade de criar o site veio da percepção de um gap no mercado de hardware. Onde as pessoas não tem noção do tipo de hardware eles precisam para o seu uso.</p>
     </div>
 
-    <!-- Requisitos do Sistema -->
+    <!-- ----------------------------- Requisitos do Sistema ----------------------------------- -->
     <div class="requisitos">
         <h1>REQUISITOS DO SISTEMA</h1>
+
         <h2>REQUISITOS FUNCIONAIS</h2>
+
         <div class="carousel-container">
-            <button class="prev">◀</button>
+            <button class="prevRF">◀</button>
 
-            <div class="carousel" id="carousel">
-                <div class="card">RF01 - Cadastro</div>
-                <div class="card">RF02 - Login</div>
-                <div class="card">RF03 - Logout</div>
-                <div class="card">RNF01 - Segurança</div>
-                <div class="card">RNF02 - Performance</div>
+            <div class="carousel" id="carouselRF">
+                <div class="card">
+                    <h1> Sistema de Login </h1>
+                    <ul>
+                        <li> O sistema deve permitir que o usuário crie uma conta </li>
+                        <li> O sistema deve permitir que o usuário logue com e-mail e senha </li>
+                        <li> O sistema deve permitir recuperação de senha </li>
+                        <li> O sistema deve permitir fazer o logout </li>
+                        <li> O sistema deve permitir que o usuário escolha suas preferências para o sistema </li>
+                        <li> O sistema deve permitir que o usuário insira os seus dados </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1> Sistema de Vendas </h1>
+                    <ul>
+                        <li> O sistema deve permitir que o usuário coloque itens no carrinho </li>
+                        <li> O sistema deve avisar a quantidade de estoque de algum item, e se tem algum estoque </li>
+                        <li> O sistema deve validar e calcular um desconto por cupom </li>
+                        <li> O sistema deve permitir avaliações </li>
+                        <li> O sistema deve exibir uma opção de ver todos os itens de uma categoria em sua tela principal </li>
+                        <li> O sistema deve permitir pagamento por pix, por cartão de crédito, e por paypal </li>
+                        <li> O sistema deve permitir avaliações mostrar a descrição detalhada do produto, incluindo o desempenho estimado dele </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1> Sistema de Buscas </h1>
+                    <ul>
+                        <li>O sistema deve filtrar por ordem alfabética </li>
+                        <li>O sistema deve filtrar por ordem alfabética </li>
+                        <li>O sistema deve filtrar por desempenho </li>
+                        <li>O sistema deve filtrar por marca </li>
+                        <li>O sistema deve filtrar por tipo de produto </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1> Sistema de Entregas </h1>
+                    <ul>
+                        <li>O sistema deve receber o endereço para entrega </li>
+                        <li>O sistema deve validar o pagamento antes de efetuar o envio do produto </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1> Sistema de Montagem de PC </h1>
+                    <ul>
+                        <li> O sistema deve permitir a montagem de um computador personalizado </li>
+                        <li> O sistema deve validar a compatibilidade das pessas ao adicionar elas na build </li>
+                        <li> O sistema deve permitir que o usuário salve a build montada </li>
+                        <li> O sistema deve permitir que o usuário compare as builds salvas por ele </li>
+                        <li> O sistema deve mostrar o desempenho estimado da build </li>
+                        <li> O sistema deve mostrar os jogos e softwares que o pc deve rodar </li>
+                        <li> O sistema deve permitir o usuário escolher priorizar o desempenho, longevidade ou custo da build </li>
+                        <li> O sistema deve perguntar quais softwares e games o usuário pretende usar </li>
+                        <li> O sistema deve perguntar ao usuário quanto ele tem de orçamento </li>
+                        <li> O sistema deve mostrar 3 opções de builds. A mais barata, a intermediária e a mais cara para o uso descrito pelo usuário </li>
+                        <li> O sistema deve permitir que o usuário salve um setup como o setup possuido por ele, e então deve sugerir os melhores upgrades </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h1> Sistema de Suporte </h1>
+                    <ul>
+                        <li>O sistema deve possuir um chat com um agente de IA para suporte </li>
+                        <li>O sistema deve possuir um e-mail para suporte personalizado </li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <button class="next">▶</button>
-        <h2>REQUISITOS NÃO FUNCIONAIS</h2>
-        <div class="carousel-container">
-            <button class="prev">◀</button>
-
-            <div class="carousel" id="carousel">
-                <div class="card">RF01 - Cadastro</div>
-                <div class="card">RF02 - Login</div>
-                <div class="card">RF03 - Logout</div>
-                <div class="card">RNF01 - Segurança</div>
-                <div class="card">RNF02 - Performance</div>
-            </div>
+            <button class="nextRF">▶</button>
 
             <script>
-                const carousel = document.getElementById('carousel');
-
-                document.querySelector('.next').onclick = () => {
-                    carousel.scrollLeft += 300;
+                const carouselRF = document.getElementById('carouselRF');
+                document.querySelector('.nextRF').onclick = () => {
+                    carouselRF.scrollLeft += 300;
                 };
-
-                document.querySelector('.prev').onclick = () => {
-                    carousel.scrollLeft -= 300;
+                document.querySelector('.prevRF').onclick = () => {
+                    carouselRF.scrollLeft -= 300;
                 };
             </script>
         </div>
 
-        <button class="next">▶</button>
+        <h2>REQUISITOS NÃO FUNCIONAIS</h2>
+
+        <div class="carousel-container">
+            <button class="prevRNF">◀</button>
+
+            <div class="carousel" id="carouselRNF">
+                <div class="card">
+                    <ul>
+                        <li> O sistema deve ser seguro </li>
+                        <li> O sistema deve permitir até 500 acessos simultâneos </li>
+                        <li> O sistema deve proteger os dados de pagamento </li>
+                        <li> O sistema deve ter tempo de resposta rápido (< 2ms) </li>
+                        <li> O sistema deve ser estável </li>
+                        <li> O sistema deve ter alta disponibilidade </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="nextRNF">▶</button>
+
+            <script>
+                const carouselRNF = document.getElementById('carouselRNF');
+                document.querySelector('.nextRNF').onclick = () => {
+                    carouselRNF.scrollLeft += 300;
+                };
+                document.querySelector('.prevRNF').onclick = () => {
+                    carouselRNF.scrollLeft -= 300;
+                };
+            </script>
+        </div>
+
     </div>
 
 
-    <!-- Diagrama de Caso de Uso -->
+    <!-- ----------------------------- Diagrama de Caso de Uso ----------------------------------- -->
     <div class="casoDeUso">
         <h1>DIAGRAMA DE CASO DE USO</h1>
     </div>
 
-    <!-- Diagrama de Classes -->
-    <div class="classes">
+    <!-- ----------------------------- Diagrama de Classes ----------------------------------- -->
+    <div class="diagramaDeClasses">
         <h1>DIAGRAMA DE CLASSES</h1>
         <div class="conteiner">
             <h2>Suporte</h2>
@@ -119,7 +193,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- ----------------------------- Footer ----------------------------------- -->
     <footer>
         <p> Conteúdo do footer </p>
     </footer>
