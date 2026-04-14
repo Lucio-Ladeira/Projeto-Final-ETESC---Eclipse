@@ -73,8 +73,9 @@ html, body {
     font-size: larger;
     /* Formato */
     padding: 20px;
-
     transition: 0.3s;
+    /*Sombra*/
+    box-shadow: 1px 15px 26px #000000b5;
 }
 
 .navigation p {
@@ -103,6 +104,7 @@ html, body {
 
 .navigation #linkComeco:hover {
     cursor:pointer;
+    transform: scale(-5);
 }
 
 /*--------------------------------- Título principal do site ---------------------------------*/
@@ -283,6 +285,7 @@ html, body {
     /* Aparência */
     background: var(--cor-secundaria);
     border-radius: 12px;
+    box-shadow: 3.5px 5px 5px var(--cor-escuro);
 
     /* Fonte */
     color: var(--cor-marfim);
@@ -377,10 +380,19 @@ html, body {
 }
 
 .imagemCasoDeUso img {
+    transition: 0.3s;
     max-width: 70%;
     height: auto;
     border-radius: 12px;
+    box-shadow: 0 4px 25px black;
 }
+
+.imagemCasoDeUso img:hover {
+    transition: 0.3s;
+    transform: scale(1.02);
+}
+
+
 
 /*--------------------------------- Diagrama de Classes ---------------------------------*/
 .diagramaDeClasses {
@@ -419,7 +431,7 @@ html, body {
 .imagemDiagramaClasses img {
     cursor: zoom-in;
     transition: 0.3s;
-    
+    box-shadow: 0 4px 25px black;
     max-width: 70%;
     height: auto;
     border-radius: 12px;
@@ -485,6 +497,7 @@ html, body {
     /* Fonte */
     color: var(--cor-claro);
     font-size: smaller;
+    text-align:center;
 
     /* Tamanho */
     padding: 24px 10px 24px 10px;
@@ -504,18 +517,40 @@ html, body {
 }
 
 .imgBox {
-    width: 24px;
-    height: 24px;
+    /* Aparência */
     background-image: url("assets/icons/logotipo-do-instagram.png");
     background-size: cover;
+    box-shadow: 3.5px 5px 5px var(--cor-escuro);
+    border-radius: 100%;
+    
+    /* Tamanho */
+    width: 24px;
+    height: 24px;
+    
     transition: 0.3s;
 }
 
+.ending-RedesSociais {
+    /* Tamanho */
+    width: 150px;
+
+    /* Posicionamento */
+    display: flex;
+    margin-left: 45vw;
+
+}
+
+.ending-RedesSociais ul{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
 #instaLucio:hover {
-    border-radius: 100%;
-    background-image: url("assets/fotoPerfil/fotoInstaLucio.jpg");
     transition: 0.3s;
     transform: scale(1.2);
+    border-radius: 100%;
+    background-image: url("assets/fotoPerfil/fotoInstaLucio.jpg");
 }
 
 #instaGS:hover {
