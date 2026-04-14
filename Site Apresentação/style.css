@@ -55,6 +55,9 @@ html, body {
 
     /* Fonte Padrão */
     font-family: 'Bebas';
+
+    /* Suavização de Scroll */
+    scroll-behavior: smooth;
 }
 
 /*--------------------------------- Nav ---------------------------------*/
@@ -63,10 +66,15 @@ html, body {
     background-color: var(--cor-secundaria);
     /* Position */
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     /* Text */
     font-size: larger;
     /* Formato */
     padding: 20px;
+
+    transition: 0.3s;
 }
 
 .navigation p {
@@ -90,11 +98,11 @@ html, body {
 .navigation a:hover {
     transition: 0.3s;
     color: var(--cor-contraste);
+    font-size: 20px;
 }
 
-.navigation a:hover {
-    font-size: 20px;
-    color: var(--cor-contraste);
+.navigation #linkComeco:hover {
+    cursor:pointer;
 }
 
 /*--------------------------------- Título principal do site ---------------------------------*/
@@ -168,7 +176,6 @@ html, body {
     background-color: var(--cor-secundaria);
 
     /* Tamanho */
-    /*padding: 24px;*/
     padding: 24px 0 24px 0;
 }
 
@@ -336,50 +343,201 @@ html, body {
 }
 
 /*------------------------------- Diagrama de Caso de Uso ---------------------------------*/
-.casoDeUso {
+.diagramaDeCasoDeUso {
     /* Cor de fundo*/
     background-color: var(--cor-secundaria);
 
-    /* Posição */
-    padding: 24px;
+    /* Tamanho */
+    padding: 24px 0 24px 0;
 }
 
-.casoDeUso h1, h2, p {
+.diagramaDeCasoDeUso h1 {
+    /* Fonte */
+    font-size: 80px;
+    color: var(--cor-marfim);
+
+    /* Posição */
+    margin: 0 50px 15px 150px;
+}
+
+.diagramaDeCasoDeUso p {
     /* Fonte */
     font-size: 40px;
-    color: white;
+    color: var(--cor-marfim);
 
     /* Posição */
-    margin-left: 150px;
+    margin: 0 50px 0 300px;
 }
+
+/* Imagem do Diagrama em Si */
+.imagemCasoDeUso {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.imagemCasoDeUso img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 12px;
+}
+
 /*--------------------------------- Diagrama de Classes ---------------------------------*/
 .diagramaDeClasses {
-    /* Cor do Background */
+    /* Cor de fundo*/
     background-color: var(--cor-primaria);
 
+    /* Tamanho */
+    padding: 24px 0 24px 0;
+}
+
+.diagramaDeClasses h1 {
+    /* Fonte */
+    font-size: 80px;
+    color: var(--cor-marfim);
+
     /* Posição */
-    padding: 24px;
+    margin: 0 50px 15px 150px;
 }
 
-.conteiner {
-    transition: 0.3s;
-    background-color: coral;
+.diagramaDeClasses p {
+    /* Fonte */
+    font-size: 40px;
+    color: var(--cor-marfim);
 
-    max-width: 20vw;
-    border-radius: 20px;
-    padding: 10px;
-
-    font-size: medium;
+    /* Posição */
+    margin: 0 50px 0 300px;
 }
 
-.conteiner:hover {
+/* Imagem do Diagrama em Si */
+.imagemDiagramaClasses {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.imagemDiagramaClasses img {
+    cursor: zoom-in;
     transition: 0.3s;
-    background-color: brown;
+    
+    max-width: 70%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.imagemDiagramaClasses img:hover {
+    transition: 0.3s;
+    /*transform: scale(1.02);*/
+    transform: scale(1.02);
+}
+
+/* Zoom de imagem melhorado*/
+
+/* Imagem pequena */
+.preview {
+    max-width: 400px;
+    cursor: pointer;
+}
+
+/* Fundo escuro */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Botão fechar */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Área de zoom */
+.zoom-container {
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+
+/* Imagem grande */
+#zoomImg {
+    min-width: 100%;
+    width: 100%;
+    /*transform-origin: top left;*/
+    transform-origin: center;
+    transition: transform 0.1s;
 }
 
 /*--------------------------------- Footer ---------------------------------*/
-footer {
-    background-color: coral;
+.ending {
+    /* Aparência */
+    background-color: var(--cor-secundaria);
+
+    /* Fonte */
+    color: var(--cor-claro);
+    font-size: smaller;
+
+    /* Tamanho */
+    padding: 24px 10px 24px 10px;
+
+    /* Posicionamento */
+    
+}
+
+.ending a {
+    /* Fonte */
+    text-decoration: none;
+    color: var(--cor-claro);
+}
+
+.ending li {
+    list-style: none;
+}
+
+.imgBox {
+    width: 24px;
+    height: 24px;
+    background-image: url("assets/icons/logotipo-do-instagram.png");
+    background-size: cover;
+    transition: 0.3s;
+}
+
+#instaLucio:hover {
+    border-radius: 100%;
+    background-image: url("assets/fotoPerfil/fotoInstaLucio.jpg");
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+#instaGS:hover {
+    border-radius: 100%;
+    background-image: url("assets/fotoPerfil/fotoInstaDaviGS.jpg");
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+#instaSaimo:hover {
+    border-radius: 100%;
+    background-image: url("assets/fotoPerfil/fotoInstaSaimo.jpg");
+    transition: 0.3s;
+    transform: scale(1.2);
 }
 
 /*--------------------------------- Outros ---------------------------------*/
+.hidden {
+    display: none;
+}
+
+/* Suavizando os links dos navs, e acrescentando o espaço do nav */
+#navObjetivo, #navJustificativa, #navRequisitos, #navDiagramaDeCasoDeUso, #navDiagramaDeClasses {
+    scroll-margin-top: 70px;
+}

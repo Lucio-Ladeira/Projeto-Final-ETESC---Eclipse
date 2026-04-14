@@ -8,19 +8,19 @@
 </head>
 <body>
     <!-- ----------------------------- Nav ----------------------------------- -->
-    <div class="navigation">
-        <p>ECLIPSE</p>
+    <div class="navigation" id="navNavigation">
+        <p onclick="window.location.href='#';" id="linkComeco"> ECLIPSE </p>
         <nav>
-            <a href="#">Objetivo</a>
-            <a href="#">Justificativa</a>
-            <a href="#">Requisitos do Sistema</a>
-            <a href="#">Diagrama de Caso de Uso</a>
-            <a href="#">Diagrama de Classes</a>
+            <a href="#navObjetivo">Objetivo</a>
+            <a href="#navJustificativa">Justificativa</a>
+            <a href="#navRequisitos">Requisitos do Sistema</a>
+            <a href="#navDiagramaDeCasoDeUso">Diagrama de Caso de Uso</a>
+            <a href="#navDiagramaDeClasses">Diagrama de Classes</a>
         </nav>
     </div>
 
     <!-- ----------------------------- Título do Site ----------------------------------- -->
-    <div class="titulo">
+    <div class="titulo" id="navTitulo">
         <h1>APRESENTAÇÃO DO PROJETO</h1>
         <p>
         Esta é a ideia principal do 
@@ -33,7 +33,7 @@
     </div>
     
     <!-- ----------------------------- Objetivo do Projeto ----------------------------------- -->
-    <div class="objetivo">
+    <div class="objetivo" id="navObjetivo">
         <h1> OBJETIVO </h1>
         <p>
             O objetivo do site se dá por auxiliar na criação de computadores, e na compra de peças.
@@ -41,13 +41,13 @@
     </div>
 
     <!-- ----------------------------- Justificativa do Projeto ----------------------------------- -->
-    <div class="justificativa">
+    <div class="justificativa" id="navJustificativa">
         <h1> JUSTIFICATIVA </h1>
         <p> A vontade de criar o site veio da percepção de um gap no mercado de hardware. Onde as pessoas não tem noção do tipo de hardware eles precisam para o seu uso.</p>
     </div>
 
     <!-- ----------------------------- Requisitos do Sistema ----------------------------------- -->
-    <div class="requisitos">
+    <div class="requisitos" id="navRequisitos">
         <h1>REQUISITOS DO SISTEMA</h1>
 
         <h2>REQUISITOS FUNCIONAIS</h2>
@@ -169,33 +169,115 @@
 
 
     <!-- ----------------------------- Diagrama de Caso de Uso ----------------------------------- -->
-    <div class="casoDeUso">
+    <div class="diagramaDeCasoDeUso" id="navDiagramaDeCasoDeUso">
         <h1>DIAGRAMA DE CASO DE USO</h1>
+        <div class="imagemCasoDeUso">
+            <img src="assets/diagramaDeCasoDeUsoPF.png" alt="Diagrama de Caso de Uso">
+        </div>
     </div>
 
     <!-- ----------------------------- Diagrama de Classes ----------------------------------- -->
-    <div class="diagramaDeClasses">
+    <div class="diagramaDeClasses" id="navDiagramaDeClasses">
         <h1>DIAGRAMA DE CLASSES</h1>
-        <div class="conteiner">
-            <h2>Suporte</h2>
-            <h3>Atributos</h3>
-            <ul>
-                <li>asdadasd</li>
-                <li>asdasdas</li>
-                <li>adasdad</li>
-            </ul>
-            <h3>Métodos</h3>
-            <ul>
-                <li>asdadasd</li>
-                <li>asdasdas</li>
-                <li>adasdad</li>
-            </ul>
+        <div class="imagemDiagramaClasses">
+            <img src="assets/diagramaDeClassesPF.png" alt="Diagrama de Casses" id="preview">
+            <div class="modal" id="modal">
+                <span class="close" id="close">&times;</span>
+                <div class="zoom-container" id="zoomContainer">
+                    <img src="assets/diagramaDeClassesPF.png" id="zoomImg">
+                </div>
+            </div>
+            <script>
+                const preview = document.getElementById('preview');
+                const modal = document.getElementById('modal');
+                const closeBtn = document.getElementById('close');
+                const zoomImg = document.getElementById('zoomImg');
+                const container = document.getElementById('zoomContainer');
+                const nav = document.querySelector('.navigation');
+
+                let zoom = 1;
+
+                // Abrir modal
+                preview.onclick = () => {
+                    modal.style.display = "flex";
+                    nav.classList.add("hidden");
+                    nav.style.opacity = "0";
+                };
+
+                // Fechar no X
+                closeBtn.onclick = () => {
+                    modal.style.display = "none";
+                    nav.classList.remove("hidden");
+                    nav.style.opacity = "100";
+                    zoom = 1;
+                    zoomImg.style.transform = "scale(1)";
+                };
+
+                // Fechar clicando Fora
+                modal.onclick = (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = "none";
+                        nav.classList.remove("hidden");
+                        nav.style.opacity = "100";
+                    }
+                };
+
+                // Clique para aumentar zoom
+                container.onclick = () => {
+                    zoom += 0.5;
+                    zoomImg.style.transform = `scale(${zoom})`;
+                };
+
+                // Zoom seguindo o mouse
+                container.onmousemove = (e) => {
+                    const rect = container.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    const xPercent = x / rect.width * 100;
+                    const yPercent = y / rect.height * 100;
+
+                    zoomImg.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+                };
+
+                // Zoom no Scroll
+                container.onwheel = (e) => {
+                    e.preventDefault();
+                    zoom += e.deltaY * -0.001;
+                    zoom = Math.min(Math.max(1, zoom), 5);
+                    zoomImg.style.transform = `scale(${zoom})`;
+                };
+            </script>
         </div>
     </div>
 
     <!-- ----------------------------- Footer ----------------------------------- -->
-    <footer>
-        <p> Conteúdo do footer </p>
+    <footer class="ending">
+        <div class="ending-RedesSociais">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/lucio__ladeira/">
+                        <div class="imgBox" id="instaLucio"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/iidavigs/">
+                        <div class="imgBox" id="instaGS"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/kksaimo/">
+                        <div class="imgBox" id="instaSaimo"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="ending-Direitos">
+            <p>Copyright &copy; 2026 ECLIPSE. Website by <a href="https://github.com/Lucio-Ladeira"> Lúcio Ladeira </a> - <a href="https://github.com/DaviGarrocho"> Davi Garrocho </a> - <a href="https://github.com/Kksaimo"> Saymon da Silva </a> </p>
+        </div>
+
     </footer>
 </body>
 </html>
