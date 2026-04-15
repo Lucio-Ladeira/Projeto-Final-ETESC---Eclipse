@@ -8,17 +8,8 @@
     --cor-claro: #CFCFCF;
     --cor-marfim: #fffff0;
     --cor-escuro: #141414;
-    
 
-    /*
-    --cor-primaria: #141414;
-    --cor-secundaria: #7f49b4;
-    --cor-terciaria: #596EB1;
-    --cor-contraste: #FFD166;
-    --cor-claro: #CFCFCF;
-    --cor-marfim: #fffff0;
-    --cor-escuro: #141414;
-    */
+    --texto: white;
 }
 
 /*--------------------------------- Definição da fonte ---------------------------------*/
@@ -64,18 +55,27 @@ html, body {
 .navigation {
     /* Background da Nav */
     background-color: var(--cor-secundaria);
+    
     /* Position */
     display: flex;
     position: sticky;
     top: 0;
     z-index: 1000;
+
     /* Text */
     font-size: larger;
+
     /* Formato */
     padding: 20px;
-    transition: 0.3s;
+    
+    /* Tamanho */
+    height: 2.5rem;
+
     /*Sombra*/
     box-shadow: 1px 15px 26px #000000b5;
+    
+    /* Outros */
+    transition: 0.3s;
 }
 
 .navigation p {
@@ -85,7 +85,10 @@ html, body {
 }
 
 .navigation nav {
-    margin-left: 40%;
+    /* Posição */
+    display: flex;
+    margin: 0 0 0 40%;
+    
 }
 
 .navigation a {
@@ -104,8 +107,22 @@ html, body {
 
 .navigation #linkComeco:hover {
     cursor:pointer;
-    transform: scale(-5);
 }
+
+.logoEclipse {
+    /* Aparência */
+    background-image: url(assets/LOGO.png);
+    background-size:cover;
+    background-position: center;
+
+    /* Tamanho */
+    width: 10%;
+    height: auto;
+
+    /* Posição */
+    display: flex;
+}
+
 
 /*--------------------------------- Título principal do site ---------------------------------*/
 .titulo {
