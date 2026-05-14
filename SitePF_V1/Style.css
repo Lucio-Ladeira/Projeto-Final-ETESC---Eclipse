@@ -47,31 +47,61 @@ body {
 
     /* Posicionamento */
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     gap: 1rem;
+    
 }
 
 .conteiner-nav a {
+    
     transition: 0.15s;
-
+    
     text-decoration: none;
     
     color: var(--text);
+
 }
+
+.conteiner-nav button{
+    margin: 0 1.5rem 0 0;
+    width: 13rem;
+}
+
+
 
 .conteiner-nav a:hover {
     transition: 0.15s;
     font-size: 2.2rem;
-
+    
     text-decoration: none;
     
     color: var(--text-hover);
 }
 
 #logo-lego {
-    background-image: url(assets/LEGO_logo.svg.png);
+    
+    background-image: url(assets/LOGO.png);
     background-size: cover;
-    width: 4rem;
-    height: 4rem;
+    background-position: center;
+    width: 13rem;
+    height: 5rem;
     margin: 0 0 0 1.5rem;
+}
+
+@media (max-width: 725px) {
+
+.conteiner-nav {
+    justify-content: center;
+}
+
+.conteiner-nav a {
+    display: none;
+
+}
+.conteiner-nav button{
+    display: none;
+
+}
+
 }
