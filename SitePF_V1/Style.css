@@ -1,0 +1,77 @@
+:root {
+    /* Tema padrão é o tema escuro */
+    --background: #242323;
+}
+
+body {
+    /* Zerando variáveis */
+    gap: 0;
+    padding: 0;
+    margin: 0;
+
+    /* Declarando o tema escuro como tema padrão */
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 2rem;
+    
+}
+
+/* --------------- TEMAS --------------- */
+.tema-dark {
+    /* Aparência Geral */
+    --background: #242323;
+    --surface: #2c2929;
+    
+    /* Textos */
+    --text: #fafafa;
+    --text-hover: #60d7ff;
+}
+
+.tema-light {
+    /* Aparência Geral */
+    --background: #dadada;
+    --surface: #cbcbcb;
+    
+    /* Textos */
+    --text: #232323;
+    --text-hover: #252525;
+}
+
+/* --------------- NAV --------------- */
+.conteiner-nav {
+    /* Aparência */
+    background-color: var(--surface);
+    
+    /* Tamanho */
+    padding: 1.5rem 0 1.5rem 0;
+
+    /* Posicionamento */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.conteiner-nav a {
+    transition: 0.15s;
+
+    text-decoration: none;
+    
+    color: var(--text);
+}
+
+.conteiner-nav a:hover {
+    transition: 0.15s;
+    font-size: 2.2rem;
+
+    text-decoration: none;
+    
+    color: var(--text-hover);
+}
+
+#logo-lego {
+    background-image: url(assets/LEGO_logo.svg.png);
+    background-size: cover;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 0 0 1.5rem;
+}
