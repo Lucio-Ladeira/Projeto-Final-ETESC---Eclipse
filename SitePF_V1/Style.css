@@ -14,6 +14,14 @@ body {
     color: var(--text);
     font-size: 2rem;
     
+    
+   /*Nota: provavelmente vai ser tirado depois do site ficar pronto, coloquei pra nao ficar grudado no header(fica grudado por ter pouco conteudo)*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    position: relative;
+    
 }
 
 /* --------------- TEMAS --------------- */
@@ -37,6 +45,124 @@ body {
     --text-hover: #252525;
 }
 
+
+.trocarTema {
+  
+  position: absolute;
+  display: flex;
+  right: 7px;
+  
+  
+}
+
+#trocarTema {
+  
+  width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    background-image: url("assets/icons/iconTrocarTema.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    z-index: 1000;
+}
+
+#trocarTema img {
+  
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+  /* --------------- BOTAO CONTA --------------- */
+.perfil {
+    position: absolute;
+    display: inline-block;
+    right: 40px;
+    z-index: 1000;
+}
+
+#perfilBtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    background-image: url("assets/icons/iconPerfil.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: none;
+    background-color: transparent;
+}
+#perfilBtn img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.menuPerfil {
+    display: none;
+
+    position: absolute;
+    right: 0;
+    top: 55px;
+
+    width: 180px;
+    padding: 5px 0;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+    
+}
+
+.menuPerfil a {
+    display: block;
+    padding: 12px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menuPerfil a:hover {
+    background: #f0f0f0;
+}
+  /* --------------- BOTAO CARRINHO --------------- */
+.Carrinho{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    right: 70px;
+    
+    background-image: url("assets/icons/iconCarrinho.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: none;
+    background-color: transparent;
+}
+
+.Carrinho img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 /* --------------- NAV --------------- */
 .conteiner-nav {
     /* Aparência */
@@ -47,9 +173,11 @@ body {
 
     /* Posicionamento */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
     gap: 1rem;
+    top: 30px;
     
 }
 
@@ -60,6 +188,8 @@ body {
     text-decoration: none;
     
     color: var(--text);
+    
+    padding: 30px;
 
 }
 
@@ -92,7 +222,7 @@ body {
 @media (max-width: 725px) {
 
 .conteiner-nav {
-    justify-content: center;
+    /*justify-content: center;*/
 }
 
 .conteiner-nav a {
@@ -105,3 +235,128 @@ body {
 }
 
 }
+
+
+/* --------------- BARRA DE PESQUISA --------------- */
+       .search-box {
+            display: flex;
+            position: relative;
+            margin-left: 25rem;
+            
+        }
+
+        .search-box input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .search-box button {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #5B2A62;
+            background-color: #5B2A62;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .search-box button:hover {
+            background-color: #60d7ff;
+        }
+        
+        
+.Banner {
+    width: 100%;
+    height: 300px;
+
+    background-image: url(assets/BannerHP.jpg);
+    background-size: cover;
+    background-position: center;
+}
+    
+/*--------------------------------- Footer ---------------------------------*/
+.ending {
+    
+    /* Aparência */
+    background-color: #5B2A62;
+
+    /* Fonte */
+    color: #var(--text);
+    font-size: smaller;
+    text-align:center;
+
+    /* Tamanho */
+    padding: 24px 10px 24px 10px;
+
+    /* Posicionamento */
+    margin-top: auto; /*Nota: provavelmente vai ser tirado depois do site ficar pronto, coloquei pra nao ficar grudado no header(fica grudado por ter pouco conteudo)*/
+}
+
+.ending a {
+    /* Fonte */
+    text-decoration: none;
+    color: var(--text);
+    
+}
+
+.ending li {
+    list-style: none;
+}
+
+.imgBox {
+    /* Aparência */
+    background-image: url("assets/icons/logotipo-do-instagram.png");
+    background-size: cover;
+    box-shadow: 3.5px 5px 5px #5B2A62;
+    border-radius: 100%;
+    
+    /* Tamanho */
+    width: 24px;
+    height: 24px;
+    
+    transition: 0.3s;
+}
+
+.ending-RedesSociais {
+    /* Tamanho */
+    width: 150px;
+
+    /* Posicionamento */
+    display: flex;
+    margin-left: 45vw;
+    
+
+}
+
+.ending-RedesSociais ul{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    
+}
+
+#instaLucio:hover {
+    transition: 0.3s;
+    transform: scale(1.2);
+    border-radius: 100%;
+    background-image: url("assets/fotoPerfil/fotoInstaLucio.jpg");
+}
+
+#instaGS:hover {
+    border-radius: 100%;
+    background-image: url("assets/fotoPerfil/fotoInstaDaviGS.jpg");
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+#instaSaimo:hover {
+    border-radius: 100%;
+    background-image: url("assets/fotoPerfil/fotoInstaSaimo.jpg");
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
