@@ -1,6 +1,14 @@
 :root {
-    /* Tema padrão é o tema escuro */
+    /* Aparência Geral */
     --background: #242323;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -28,6 +36,7 @@ body {
     /* Outros */
     --shadow: #242323;
     --opacidadeBaixa: 50%;
+    --iconColor: 100%;
 }
 
 .tema-light {
@@ -42,6 +51,7 @@ body {
     /* Outros */
     --shadow: #242323;
     --opacidadeBaixa: 100%;
+    --iconColor: 0;
 }
 
 
@@ -70,27 +80,30 @@ body {
     background-color: transparent;
     display: inline-block;
     z-index: 1000;
-}
 
-#trocarTema img {
-
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
+    filter: invert(var(--iconColor));
 }
 
 /* --------------- BOTAO CONTA --------------- */
 .conteiner-nav1 {
-    background-color: #60d7ff;
+    background-color: var(--background);
 
     width: 100%;
     height: 5vh;
 
-    justify-content: center;
+    /*justify-content: center;*/
     display: flex;
     flex: row;
     flex-wrap: wrap;
+}
+
+.conteiner-nav1 a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: medium;
+
+    margin: 7px 0 0 7px;
+
 }
 
 /* --------------- BOTAO CONTA --------------- */
@@ -114,13 +127,8 @@ body {
 
     border: none;
     background-color: transparent;
-}
 
-#perfilBtn img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
+    filter: invert(var(--iconColor));
 }
 
 .menuPerfil {
@@ -168,6 +176,8 @@ body {
 
     border: none;
     background-color: transparent;
+
+    filter: invert(var(--iconColor));
 }
 
 /* --------------- NAV --------------- */
@@ -184,7 +194,6 @@ body {
     /*justify-content: space-between;*/
     /*align-items: center;*/
     gap: 1rem;
-    top: 30px;
 
 }
 
@@ -196,7 +205,7 @@ body {
 
     color: var(--text);
 
-    padding: 30px;
+    margin: 30px;
 
 }
 
@@ -216,8 +225,7 @@ body {
     color: var(--text-hover);
 }
 
-#logo-lego {
-
+#logo {
     background-image: url(assets/LOGO.png);
     background-size: cover;
     background-position: center;

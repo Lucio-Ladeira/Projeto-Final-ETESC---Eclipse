@@ -14,27 +14,32 @@
     <body id="body" class="tema-dark">
         <!--------------- NAV --------------->
         <div class="conteiner-nav1">
-            <div class="trocarTema">
-                <button id="trocarTema" onclick="switchTheme()"></button>
-            </div>
-            <div class="perfil">
-                <!--------------- BOTAO CONTA --------------->
-                <button id="perfilBtn"></button>
-                <div class="menuPerfil" id="menuPerfil">
-                    <a href="#">Gerenciar conta</a>
-                    <a href="#">Sair da conta</a>
+            <a href="#">MONTE SEU PC</a>
+            <nav>
+
+                <!-- TROCA DE TEMAS -->
+                <div class="trocarTema">
+                    <button id="trocarTema" onclick="switchTheme()"></button>
                 </div>
-            </div>
-            
-            <a href="#" class="Carrinho"></a>
+
+                <!-- CONTA -->
+                <div class="perfil">
+                    <button id="perfilBtn"></button>
+                    <div class="menuPerfil" id="menuPerfil">
+                        <a href="#">Minhas builds</a>
+                        <a href="#">Gerenciar conta</a>
+                        <a href="#">Sair da conta</a>
+                    </div>
+                </div>
+
+                <!-- CARRINHO -->
+                <a href="#" class="Carrinho"></a>
+            </nav>
         </div>
             
         <div class="conteiner-nav">
-            <div id="logo-lego"></div>
+            <div id="logo"></div>
             <nav>
-                <a href="#">MONTE SEU PC</a>
-                <a href="#">BUILDS</a>
-
                 <!----------------- BARRA DE PESQUISA --------------->
                 <form class="search-box" action="#" method="GET">
                     <input type="text" name="q" placeholder="Pesquisar...">
