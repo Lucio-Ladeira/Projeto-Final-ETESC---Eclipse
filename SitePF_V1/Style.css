@@ -13,15 +13,6 @@ body {
     background-color: var(--background);
     color: var(--text);
     font-size: 2rem;
-    
-    
-   /*Nota: provavelmente vai ser tirado depois do site ficar pronto, coloquei pra nao ficar grudado no header(fica grudado por ter pouco conteudo)*/
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    
-    position: relative;
-    
 }
 
 /* --------------- TEMAS --------------- */
@@ -29,39 +20,47 @@ body {
     /* Aparência Geral */
     --background: #242323;
     --surface: #2c2929;
-    
+
     /* Textos */
     --text: #fafafa;
     --text-hover: #60d7ff;
+
+    /* Outros */
+    --shadow: #242323;
+    --opacidadeBaixa: 50%;
 }
 
 .tema-light {
     /* Aparência Geral */
     --background: #dadada;
     --surface: #cbcbcb;
-    
+
     /* Textos */
     --text: #232323;
     --text-hover: #252525;
+
+    /* Outros */
+    --shadow: #242323;
+    --opacidadeBaixa: 100%;
 }
 
 
 .trocarTema {
-  
-  position: absolute;
-  display: flex;
-  right: 7px;
-  
-  
+
+    position: absolute;
+    display: flex;
+    right: 7px;
+
+
 }
 
 #trocarTema {
-  
-  width: 30px;
+
+    width: 30px;
     height: 30px;
     border-radius: 50%;
     cursor: pointer;
-    
+
     background-image: url("assets/icons/iconTrocarTema.png");
     background-size: cover;
     background-position: center;
@@ -74,14 +73,27 @@ body {
 }
 
 #trocarTema img {
-  
+
     width: 30px;
     height: 30px;
     border-radius: 50%;
     object-fit: cover;
 }
-  
-  /* --------------- BOTAO CONTA --------------- */
+
+/* --------------- BOTAO CONTA --------------- */
+.conteiner-nav1 {
+    background-color: #60d7ff;
+
+    width: 100%;
+    height: 5vh;
+
+    justify-content: center;
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+}
+
+/* --------------- BOTAO CONTA --------------- */
 .perfil {
     position: absolute;
     display: inline-block;
@@ -94,7 +106,7 @@ body {
     height: 30px;
     border-radius: 50%;
     cursor: pointer;
-    
+
     background-image: url("assets/icons/iconPerfil.png");
     background-size: cover;
     background-position: center;
@@ -103,6 +115,7 @@ body {
     border: none;
     background-color: transparent;
 }
+
 #perfilBtn img {
     width: 30px;
     height: 30px;
@@ -121,9 +134,9 @@ body {
     padding: 5px 0;
     background: white;
     border-radius: 3px;
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 
-    
+
 }
 
 .menuPerfil a {
@@ -137,8 +150,9 @@ body {
 .menuPerfil a:hover {
     background: #f0f0f0;
 }
-  /* --------------- BOTAO CARRINHO --------------- */
-.Carrinho{
+
+/* --------------- BOTAO CARRINHO --------------- */
+.Carrinho {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -146,7 +160,7 @@ body {
     position: absolute;
     display: inline-block;
     right: 70px;
-    
+
     background-image: url("assets/icons/iconCarrinho.png");
     background-size: cover;
     background-position: center;
@@ -156,18 +170,11 @@ body {
     background-color: transparent;
 }
 
-.Carrinho img{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
 /* --------------- NAV --------------- */
 .conteiner-nav {
     /* Aparência */
     background-color: var(--surface);
-    
+
     /* Tamanho */
     padding: 1.5rem 0 1.5rem 0;
 
@@ -178,22 +185,22 @@ body {
     /*align-items: center;*/
     gap: 1rem;
     top: 30px;
-    
+
 }
 
 .conteiner-nav a {
-    
+
     transition: 0.15s;
-    
+
     text-decoration: none;
-    
+
     color: var(--text);
-    
+
     padding: 30px;
 
 }
 
-.conteiner-nav button{
+.conteiner-nav button {
     margin: 0 1.5rem 0 0;
     width: 13rem;
 }
@@ -203,14 +210,14 @@ body {
 .conteiner-nav a:hover {
     transition: 0.15s;
     font-size: 2.2rem;
-    
+
     text-decoration: none;
-    
+
     color: var(--text-hover);
 }
 
 #logo-lego {
-    
+
     background-image: url(assets/LOGO.png);
     background-size: cover;
     background-position: center;
@@ -221,54 +228,55 @@ body {
 
 @media (max-width: 725px) {
 
-.conteiner-nav {
-    /*justify-content: center;*/
-}
+    .conteiner-nav {
+        /*justify-content: center;*/
+    }
 
-.conteiner-nav a {
-    display: none;
+    .conteiner-nav a {
+        display: none;
 
-}
-.conteiner-nav button{
-    display: none;
+    }
 
-}
+    .conteiner-nav button {
+        display: none;
+
+    }
 
 }
 
 
 /* --------------- BARRA DE PESQUISA --------------- */
-       .search-box {
-            display: flex;
-            position: relative;
-            margin-left: 25rem;
-            
-        }
+.search-box {
+    display: flex;
+    position: relative;
+    margin-left: 25rem;
 
-        .search-box input {
-            width: 300px;
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #ccc;
-            border-radius: 5px 0 0 5px;
-            outline: none;
-        }
+}
 
-        .search-box button {
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #5B2A62;
-            background-color: #5B2A62;
-            color: white;
-            cursor: pointer;
-            border-radius: 0 5px 5px 0;
-        }
+.search-box input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
 
-        .search-box button:hover {
-            background-color: #60d7ff;
-        }
-        
-        
+.search-box button {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #5B2A62;
+    background-color: #5B2A62;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-box button:hover {
+    background-color: #60d7ff;
+}
+
+
 .Banner {
     width: 100%;
     height: 300px;
@@ -277,30 +285,102 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+/* --------------- VITRINE --------------- */
+
+.conteiner-vitrine {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --------------- PRODUTOS --------------- */
+
+.conteiner-produtos-card {
+    /* Aparência */
+    background-color: var(--surface);
+
+    #img-produto {
+        opacity: var(--opacidadeBaixa);
+    }
+
+    /* Posicionamento interno */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    line-height: 5px;
+
+    /* Posicionamento externo */
+    padding: 5px 10px 5px 10px;
+    margin: 15px 25px 15px 25px;
+
+    /* Tamanho */
+    width:  15.625rem; /* 250px */
+    height: 27rem; /* 432px */
+
+
+    /* Textos */
+    font-size: 10px;
+
+    /* Outros */
+    transition: 0.5s;
+    z-index: 2;
+
+    hr {
+        border: none; /* Remove a borda padrão */
+        height: 3px; /* Define a espessura da linha */
+        background-color: #333; /* Cor da linha */
+        width: 50%; /* Largura da linha (em porcentagem ou pixels) */
+        margin: 0 0 0 0;
+    }
+}
+
+.conteiner-produtos-card:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
     
+    #img-produto {
+        transition: 0.5s;
+        opacity: 100%;
+    }
+}
+
+#textos-produto {
+    margin-left: -60px;
+}
+
 /*--------------------------------- Footer ---------------------------------*/
 .ending {
-    
+
     /* Aparência */
-    background-color: #5B2A62;
+    background-color: var(--surface);
 
     /* Fonte */
-    color: #var(--text);
+    color: var(--text);
     font-size: smaller;
-    text-align:center;
+    text-align: center;
 
     /* Tamanho */
     padding: 24px 10px 24px 10px;
 
     /* Posicionamento */
-    margin-top: auto; /*Nota: provavelmente vai ser tirado depois do site ficar pronto, coloquei pra nao ficar grudado no header(fica grudado por ter pouco conteudo)*/
+    margin: 0 0 0 0;
+    margin-top: auto;
+    /*Nota: provavelmente vai ser tirado depois do site ficar pronto, coloquei pra nao ficar grudado no header(fica grudado por ter pouco conteudo)*/
 }
 
 .ending a {
     /* Fonte */
     text-decoration: none;
     color: var(--text);
-    
+
 }
 
 .ending li {
@@ -311,13 +391,14 @@ body {
     /* Aparência */
     background-image: url("assets/icons/logotipo-do-instagram.png");
     background-size: cover;
-    box-shadow: 3.5px 5px 5px #5B2A62;
+    /*box-shadow: 3.5px 5px 5px #5B2A62;*/
+    box-shadow: 3.5px 5px 5px var(--shadow);
     border-radius: 100%;
-    
+
     /* Tamanho */
     width: 24px;
     height: 24px;
-    
+
     transition: 0.3s;
 }
 
@@ -328,22 +409,22 @@ body {
     /* Posicionamento */
     display: flex;
     margin-left: 45vw;
-    
+
 
 }
 
-.ending-RedesSociais ul{
+.ending-RedesSociais ul {
     display: flex;
     justify-content: center;
     gap: 12px;
-    
+
 }
 
 #instaLucio:hover {
     transition: 0.3s;
+    background-image: url("assets/fotoPerfil/fotoInstaLucio.jpg");
     transform: scale(1.2);
     border-radius: 100%;
-    background-image: url("assets/fotoPerfil/fotoInstaLucio.jpg");
 }
 
 #instaGS:hover {
@@ -359,4 +440,3 @@ body {
     transition: 0.3s;
     transform: scale(1.2);
 }
-
